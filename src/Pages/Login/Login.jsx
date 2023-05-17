@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
-import { AuthContext } from '../../Provider/AuthProvider/AuthProvider';
 import Loader from '../Shared/Loader/Loader';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const Login = () => {
     const { googleLoginUser, loginInUser, loading, setLoading, setUser } = useContext(AuthContext);

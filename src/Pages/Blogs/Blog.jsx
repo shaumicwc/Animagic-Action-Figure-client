@@ -9,7 +9,7 @@ const Blog = () => {
             </div>
             <div id='blog' >
         {/* Question : 1 section */}
-        <div>
+        <div className='p-10'>
             <p>
                 <span className="font-blog-q st-font-family mb-5 text-blog-qst-color text-2xl font-extrabold ">Question : 1</span>
                 <br /> 
@@ -18,17 +18,33 @@ const Blog = () => {
             <p>
                 <span className="text-blog-ans-color font-extrabold text-xl font-blog-qst-font-family mb-5">Answer:</span>
                 <br />
-                In React, components can handle user input in two ways: controlled or uncontrolled. They are:
+              
             </p>
-            <ol>
-                <li>Controlled components use React state to manage the input's value. This gives us more control over the input's behavior and allow us to perform additional validation or manipulation of the input's value.</li>
-                <li>Uncontrolled components let the browser handle the input's value. They are simpler to use and require less code, but offer less control and flexibility.</li>
-            </ol>
-            <p>The choice between the two depends on our specific needs and requirements.</p>
+            <p className='font-semibold'>
+                Access token and Refresh Token:
+            </p>
+            <p>An access token is like a special key that allows a computer program to access certain things, like a locked room or a website. It is given to the program after a user logs in or gives permission.
+            A refresh token is also given to the program at the same time, and it's like a backup key. When the access token gets old and stops working, the program can use the refresh token to get a new access token without bothering the user to log in again. <br />
+
+            So, access tokens and refresh tokens are like keys that let computer programs do certain things without needing to ask the user for permission all the time.</p>
+            <br />
+            <p className='font-semibold'>How they work: </p>
+            <p>
+            Access tokens and refresh tokens are like special keys that apps use to do things for you securely. The access token is given when you log in and lets the app access your information. If it expires, the app uses the refresh token to get a new access token without you logging in again. This way, you can use apps easily without always entering your password. The tokens help keep things safe and ensure only authorized apps can act on your behalf.
+            </p>
+            <br />
+            <p className='font-semibold'>
+            client-side store :
+            </p>
+            <p>
+            Store access tokens and refresh tokens securely on the client-side, preferably in memory, to ensure their protection and prevent unauthorized access.   
+            </p>
+
+
         </div>
         <br />
         {/* Question : 2 section */}
-        <div>
+        <div className='p-10'>
             <p>
                 <span className="font-blog-qst-font-family mb-5 text-blog-qst-color text-2xl font-extrabold ">Question : 2 </span>
                 <br /> 
@@ -37,12 +53,12 @@ const Blog = () => {
             <p>
                 <span className="text-blog-ans-color font-extrabold text-xl font-blog-qst-font-family mb-5">Answer:</span>
                 <br />
-                React PropTypes is a tool that help us check if the data (props) we are passing into a component is the correct type and format. It's like a spell-checker that prevents us from making mistakes. By using PropTypes, we can catch errors and bugs early in the development process, which can save us time and effort in the long run.
+                SQL databases are suitable for structured data with complex relationships and require strong consistency. NoSQL databases are more flexible, scalable, and handle unstructured or semi-structured data, prioritizing availability and scalability over strict consistency. The choice between SQL and NoSQL depends on the specific requirements and characteristics of the data and the application.
             </p>
         </div>
         <br />
         {/* Question : 3 section */}
-        <div>
+        <div className='p-10'>
             <p>
                 <span className="font-blog-qst-font-family mb-5 text-blog-qst-color text-2xl font-extrabold ">Question : 3</span>
                 <br /> 
@@ -63,7 +79,7 @@ const Blog = () => {
         </div>
         <br />
         {/* Question : 4 section */}
-        <div>
+        <div className='p-10'>
             <p>
                 <span className="font-blog-qst-font-family mb-5 text-blog-qst-color text-2xl font-extrabold ">Question : 4</span>
                 <br /> 
