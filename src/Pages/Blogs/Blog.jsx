@@ -9,7 +9,7 @@ const Blog = () => {
             </div>
             <div id='blog' >
         {/* Question : 1 section */}
-        <div className='p-10'>
+        <div className='p-16'>
             <p>
                 <span className="font-blog-q st-font-family mb-5 text-blog-qst-color text-2xl font-extrabold ">Question : 1</span>
                 <br /> 
@@ -44,7 +44,7 @@ const Blog = () => {
         </div>
         <br />
         {/* Question : 2 section */}
-        <div className='p-10'>
+        <div className='p-16'>
             <p>
                 <span className="font-blog-qst-font-family mb-5 text-blog-qst-color text-2xl font-extrabold ">Question : 2 </span>
                 <br /> 
@@ -58,28 +58,26 @@ const Blog = () => {
         </div>
         <br />
         {/* Question : 3 section */}
-        <div className='p-10'>
+        <div className='p-16'>
             <p>
                 <span className="font-blog-qst-font-family mb-5 text-blog-qst-color text-2xl font-extrabold ">Question : 3</span>
                 <br /> 
                 <span className='qus font-blog-qus-font-family font-extrabold text-xl'>What is express js? What is Nest JS? </span>
             </p>
-            <p>
+            
+                <p>
                 <span className="text-blog-ans-color font-extrabold text-xl font-blog-qst-font-family mb-5">Answer:</span>
-                <br />
-                Node.js is the underlying technology that allows you to run JavaScript code on the server, while Express.js is a framework that sits on top of Node.js and provides a set of tools and features for building web applications and APIs. Here are some key differences between Node.js and Express.js:
-            </p>
-            <ol>
-                <li>Node.js is a runtime environment for JavaScript, while Express.js is a web application framework built on top of Node.js.</li>
-                <li>Node.js provides core features for building server-side applications, while Express.js provides additional features for building web applications and APIs</li>
-                <li>Node.js can be used to build a wide range of server-side applications, while Express.js is primarily used for building web applications and APIs.</li>
-              
-            </ol>
+                </p>
+                <p  className='font-semibold'> Express Js : </p>
+                <p>Express Js is a special tool that helps computer programmers build websites and apps. It's like a set of building blocks that make it easier to create cool things on the internet. Express Js is popular because it's simple to use and gives programmers a lot of freedom to design their websites or apps in their own way. It can handle things like showing web pages, handling user input, and connecting to databases. Lots of people like using Express.js because it's like having a big toolbox full of useful tools for building websites and apps.</p> <br />
+                <p  className='font-semibold'> Next Js : </p>
+                <p>Nest JS is a special tool that helps programmers build powerful websites and apps. It's organized, uses TypeScript for safety, and works well with other tools. It's a great choice for building awesome web applications.</p>
+          
                 
         </div>
         <br />
         {/* Question : 4 section */}
-        <div className='p-10'>
+        <div className='p-16'>
             <p>
                 <span className="font-blog-qst-font-family mb-5 text-blog-qst-color text-2xl font-extrabold ">Question : 4</span>
                 <br /> 

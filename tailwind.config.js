@@ -5,11 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      brightness: {
+        '65' : '65%'
+      },
+    },
   },
   daisyui : {
     themes : ['lofi']
   },
-  plugins: [require("daisyui")],
+  plugins: [require('daisyui')],
 }
 
