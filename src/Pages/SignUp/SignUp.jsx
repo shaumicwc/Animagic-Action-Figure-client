@@ -1,7 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../../Provider/AuthProvider/AuthProvider';
+
 import Loader from '../Shared/Loader/Loader';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const SignUp = () => {
     const { createUser, loading, setLoading, setUser } = useContext(AuthContext);
