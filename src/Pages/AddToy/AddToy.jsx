@@ -1,10 +1,22 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
+import Select from 'react-select';
 
 
 
 const AddToy = () => {
     const { user } = useContext(AuthContext)
+    const [selectedOption, setSelectedOption] = useState(null);
+
+    const options = [
+        { value: 'Action Figures', label: 'Action Figures' },
+        { value: 'Completed Figures', label: 'Completed Figures' },
+        { value: 'Nendoroid', label: 'Nendoroid' },
+        { value: 'figma', label: 'figma' },
+        { value: 'Plastic Kit', label: 'Plastic Kit' },
+        { value: 'Garage Kits', label: 'Garage Kits' },
+        { value: 'Scenery Set', label: 'Scenery Set' },
+    ];
 
 
     const category = selectedOption?.map(sp => sp.value);
@@ -71,7 +83,13 @@ const AddToy = () => {
                     <label className="label">
                         <span className="label-text font-semibold">Sub-category</span>
                     </label>
-                  
+                  <Select
+                        placeholder='Select subcategory'
+                        defaultValue={selectedOption}
+                        onChange={setSelectedOption}
+                        options={options}
+                        isMulti
+                    />
                 </div>
                 <div className="form-control">
                     <label className="label">
