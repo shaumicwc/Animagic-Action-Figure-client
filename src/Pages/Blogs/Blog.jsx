@@ -81,17 +81,22 @@ const Blog = () => {
             <p>
                 <span className="font-blog-qst-font-family mb-5 text-blog-qst-color text-2xl font-extrabold ">Question : 4</span>
                 <br /> 
-                <span className='font-blog-qus-font-family font-extrabold text-xl'>What is a custom hook, and why will you create a custom hook? </span>
+                <span className='font-blog-qus-font-family font-extrabold text-xl'>What is MongoDB aggregate and how does it work? </span>
             </p>
             <p>
-                <span className="text-blog-ans-color font-extrabold text-xl font-blog-qst-font-family mb-5">Answer: </span>
-                <br />
-                A custom hook is a function in React that allows us to reuse stateful logic between components, making it easier to create reusable and composable code. It's a way to extract and reuse common code that manages stateful logic and side effects, by leveraging existing React hooks.Its very important that we use in time of need. 
+                <span className="text-blog-ans-color font-extrabold text-xl font-blog-qst-font-family mb-5">Answer: </span> </p>
+                
 
-                <br />
+                <p className='font-semibold'> MongoDB:</p>
 
-               I will create a custom hook for tasting and share components. Creating a custom hook in React can help me to improve reusability, organization, abstraction, and testing of my code. It allow me to encapsulate complex logic and state management into a reusable function, which can be easily shared across components and projects.
-            </p>
+                <p>MongoDB is a special type of computer system that helps store and manage data. It's like a big container where you can keep lots of information.  You can easily add, remove, or change data as needed. MongoDB also has powerful tools that allow you to search, group, and analyze the data in smart ways.</p> <br />
+
+                <p className='font-semibold'>How MongoDB works:</p>
+
+                <p>
+                In MongoDB, the aggregate function is a special tool used to analyze and change data in a collection. It works by following a set of steps, like a pipeline, to do different operations on the data. First, you can choose which documents to use based on specific conditions. Then, you can group the data and do calculations within each group. After that, you can use different operations to do things like counting, summing, or sorting. Finally, you can sort the results and choose how many to show. By using these steps, the aggregate function helps us analyze and get valuable information from our data in MongoDB.
+                </p>
+            
         </div>
             </div>
 
