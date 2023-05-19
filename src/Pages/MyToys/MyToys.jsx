@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { AuthContext } from '../../Provider/AuthProvider/AuthProvider';
+
 import { FaPencilAlt, FaTrashAlt } from 'react-icons/fa';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const MyToys = () => {
     const { user } = useContext(AuthContext)
