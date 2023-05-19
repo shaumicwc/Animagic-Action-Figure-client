@@ -2,12 +2,12 @@ import React from 'react';
 
 const PreOrder = () => {
     return (
-            <div className='my-5 px-10'>
+            <div className='my-5 px-5 flex flex-col justify-center '>
             <p className='font-bold text-3xl text-center my-5'>Pre-Order Section</p>
             <p className='font-semibold text-center my-5'>Get Our Most Exclusive Action Figures Before Everyone in Less Price</p>
            <div className='grid md:grid-cols-3 grid-cols-1 gap-5'>
            <div className="card w-96 glass">
-                <figure><img src="https://i.ibb.co/Qr2ctbd/pre-Order-1.jpg" alt="car!" /></figure>
+                <figure><img className='w-full h-96' src="https://i.ibb.co/Qr2ctbd/pre-Order-1.jpg" alt="car!" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">Action Figure:
                     Martha Assemble Heroines Summer Queen</h2>
@@ -20,7 +20,7 @@ const PreOrder = () => {
                 </div>
             </div>
             <div className="card w-96 glass">
-                <figure><img src="https://i.ibb.co/BwMDxDF/newpre-2.jpg" alt="car!" /></figure>
+                <figure><img className='w-full h-96' src="https://i.ibb.co/BwMDxDF/newpre-2.jpg" alt="car!" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">Action Figure: <br /> Kaguya-sama: Love Is War - Chika Fujiwara DT-170 Figure</h2>
                     <p>Old Stock Price: 55$</p>
@@ -32,7 +32,7 @@ const PreOrder = () => {
                 </div>
             </div>
             <div className="card w-96 glass">
-                <figure><img src="https://i.ibb.co/7jzpq6N/newpre3.jpg" alt="car!" /></figure>
+                <figure><img className='w-full h-96' src="https://i.ibb.co/7jzpq6N/newpre3.jpg" alt="car!" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">Action Figure: Zero-Rem Figure</h2>
                     <p>Old Stock Price: 45$</p>
