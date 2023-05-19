@@ -1,79 +1,87 @@
 import React, { useEffect, useState } from "react";
 import { Box, Tab, Tabs } from "@mui/material";
 import ShopByCategoryCard from "./ShopByCategoryCard";
+import Loader from "../../Shared/Loader/Loader";
 
 const ShopByCategory = () => {
     const [currentTabIndex, setCurrentTabIndex] = useState(0);
-    const [selectedCard, setSelectedCard] = useState(null);
     const [data, setData] = useState([]);
+    const [shonenData, setShonenData] = useState([]);
+    const [megicalGirlData, setMegicalGirlData] = useState([])
+    const [mechaData, setMechaData] = useState([])
+    const [loading, setLoading] = useState(true);
 
     const handleTabChange = (event, tabIndex) => {
         setCurrentTabIndex(tabIndex);
-        setSelectedCard(null); // Reset the selected card when switching tabs
     };
 
     useEffect(() => {
-        fetch("http://localhost:3000/categoryToyDetails")
+        fetch("http://localhost:3000/categoryToys")
             .then((res) => res.json())
-            .then((data) => setData(data));
+            .then((data) => {
+                setData(data);
+            })
+            .catch((error) => {
+                console.log(error.message);
+                setLoading(false);
+            });
     }, []);
 
-    const narutoData = data.find((dt) => dt._id === "6466a11133a0c04d060b0672");
-    const onePieceData = data.find((dt) => dt._id === "6466a11133a0c04d060b0673");
-    const dragonBallData = data.find((dt) => dt._id === "6466a11133a0c04d060b0674");
-    const sailorMoonData = data.find((dt) => dt._id === "6466a11133a0c04d060b0675");
-    const cardCaptorData = data.find((dt) => dt._id === "6466a11133a0c04d060b0676");
-    const madokaData = data.find((dt) => dt._id === "6466a11133a0c04d060b0677");
-    const gundamData = data.find((dt) => dt._id === "6466a11133a0c04d060b0678");
-    const evangelionData = data.find((dt) => dt._id === "6466a11133a0c04d060b0679");
-    const codeGeassData = data.find((dt) => dt._id === "6466a11133a0c04d060b067a");
+    useEffect(() => {
+        const shonenData1 = data.find((dt) => dt._id === "6467eb4733a0c04d06ec0a87");
+        const shonenData2 = data.find((dt) => dt._id === "6467eb4733a0c04d06ec0a88");
+        const shonenData3 = data.find((dt) => dt._id === "6467eb4733a0c04d06ec0a89");
+        const megicalGirlData1 = data.find((dt) => dt._id === "6467eb4733a0c04d06ec0a8a");
+        const megicalGirlData2 = data.find((dt) => dt._id === "6467eb4733a0c04d06ec0a8b");
+        const megicalGirlData3 = data.find((dt) => dt._id === "6467eb4733a0c04d06ec0a8c");
+        const mechaData1 = data.find((dt) => dt._id === "6467eb4733a0c04d06ec0a8d");
+        const mechaData2 = data.find((dt) => dt._id === "6467eb4733a0c04d06ec0a8e");
+        const mechaData3 = data.find((dt) => dt._id === "6467eb4733a0c04d06ec0a8f");
+      
+        // Check if all shonenData variables are defined
+        if (shonenData1 && shonenData2 && shonenData3) {
+          setShonenData([shonenData1, shonenData2, shonenData3]);
+          setLoading(false)
+        }
+         if(megicalGirlData1 && megicalGirlData2 && megicalGirlData3){
+            setMegicalGirlData([megicalGirlData1, megicalGirlData2, megicalGirlData3])
+            setLoading(false)
+         }
+         if(mechaData1 && mechaData2 && mechaData3){
+            setMechaData([mechaData1, mechaData2, mechaData3])
+            setLoading(false)
+         }
+      }, [data]);
 
     return (
         <React.Fragment>
-            <Tabs
-                sx={{ backgroundColor: "#d2c59d", py: 2, display: "flex", justifyContent: "center" }}
-                allowScrollButtonsMobile={true}
-                value={currentTabIndex}
-                onChange={handleTabChange}
-                centered
-            >
-                <Tab className="tab" label="Shonen Anime Action Figures" />
-                <Tab className="tab" label="Magical Girl Anime Action Figures" />
-                <Tab className="tab" label="Mecha Anime Action Figures" />
-            </Tabs>
+            <p className="text-center text-3xl font-bold my-5">Shop By Category</p>
+            <div className="flex justify-center">
+                <Tabs
+                    sx={{ backgroundColor: "#e7e2df", py: 2, borderRadius: "10px" }}
+                    variant="scrollable"
+                    allowScrollButtonsMobile
+                    value={currentTabIndex}
+                    onChange={handleTabChange}
+                >
+                    <Tab className="tab" label="Shonen Action Figures" />
+                    <Tab className="tab" label="Magical Girl Action Figures" />
+                    <Tab className="tab" label="Mecha Action Figures" />
+                </Tabs>
+            </div>
 
             {/* TAB 1 Contents */}
             {currentTabIndex === 0 && (
                 <Box sx={{ p: 3, width: "100%", margin: "auto", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                    <div className='border-2 shadow-2xl p-5 mx-5'>
-                        <p onClick={() => setSelectedCard(0)} className={`cursor-pointer text-center ${selectedCard === 0 ? "text-2xl font-semibold my-3" : "text-xl"}`}>Naruto Action Figures</p>
-                        {selectedCard === 0 && (
-                            <div className="flex flex-col md:flex-row md:space-x-32 justify-center">
-                                {narutoData?.toys?.map((toy) => (
-                                    <ShopByCategoryCard key={toy._id} data={toy} />
-                                ))}
-                            </div>
-                        )}
-                    </div>
-                    <div className='border-2 shadow-2xl p-5 mx-5'>
-                        <p onClick={() => setSelectedCard(1)} className={`cursor-pointer text-center ${selectedCard === 1 ? "text-2xl font-semibold my-3" : "text-xl"}`}>One Piece Action Figures</p>
-                        {selectedCard === 1 && (
-                            <div className="flex flex-col md:flex-row md:space-x-32 justify-center">
-                                {onePieceData?.toys?.map((toy) => (
-                                    <ShopByCategoryCard key={toy._id} data={toy} />
-                                ))}
-                            </div>
-                        )}
-                    </div>
-                    <div className='border-2 shadow-2xl p-5 mx-5'>
-                        <p onClick={() => setSelectedCard(2)} className={`cursor-pointer text-center ${selectedCard === 2 ? "text-2xl font-semibold my-3" : "text-xl"}`}>Dragon Ball Z Action Figures</p>
-                        {selectedCard === 2 && (
-                            <div className="flex flex-col md:flex-row md:space-x-32 justify-center">
-                                {dragonBallData?.toys?.map((toy) => (
-                                    <ShopByCategoryCard key={toy._id} data={toy} />
-                                ))}
-                            </div>
-                        )}
+                    <div className="border-2 shadow-2xl p-5 mx-5">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mx-auto justify-center items-center">
+                            {
+                                loading ? <Loader /> :
+                                     shonenData.map(sd => (
+                                        <ShopByCategoryCard key={sd._id} data={sd} />
+                                    ))
+                            }
+                        </div>
                     </div>
                 </Box>
             )}
@@ -82,34 +90,14 @@ const ShopByCategory = () => {
             {currentTabIndex === 1 && (
                 <Box sx={{ p: 3, width: "100%", margin: "auto", display: "flex", flexDirection: "column", justifyContent: "center" }}>
                     <div className="border-2 shadow-2xl p-5 mx-5">
-                        <p onClick={() => setSelectedCard(0)} className={`cursor-pointer text-center ${selectedCard === 0 ? "text-2xl font-semibold my-3" : "text-xl"}`}>Sailor Moon Action Figures</p>
-                        {selectedCard === 0 && (
-                            <div className="flex flex-col md:flex-row md:space-x-32 justify-center">
-                                {sailorMoonData?.toys?.map((toy) => (
-                                    <ShopByCategoryCard key={toy._id} data={toy} />
-                                ))}
-                            </div>
-                        )}
-                    </div>
-                    <div className="border-2 shadow-2xl p-5 mx-5">
-                        <p onClick={() => setSelectedCard(1)} className={`cursor-pointer text-center ${selectedCard === 1 ? "text-2xl font-semibold my-3" : "text-xl"}`}>Cardcaptor Sakura Action Figures</p>
-                        {selectedCard === 1 && (
-                            <div className="flex flex-col md:flex-row md:space-x-32 justify-center">
-                                {cardCaptorData?.toys?.map((toy) => (
-                                    <ShopByCategoryCard key={toy._id} data={toy} />
-                                ))}
-                            </div>
-                        )}
-                    </div>
-                    <div className="border-2 shadow-2xl p-5 mx-5">
-                        <p onClick={() => setSelectedCard(2)} className={`cursor-pointer text-center ${selectedCard === 2 ? "text-2xl font-semibold my-3" : "text-xl"}`}>Madoka Magica Action Figures</p>
-                        {selectedCard === 2 && (
-                            <div className="flex flex-col md:flex-row md:space-x-32 justify-center">
-                                {madokaData?.toys?.map((toy) => (
-                                    <ShopByCategoryCard key={toy._id} data={toy} />
-                                ))}
-                            </div>
-                        )}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                        {
+                                loading ? <Loader /> :
+                                     megicalGirlData.map(sd => (
+                                        <ShopByCategoryCard key={sd._id} data={sd} />
+                                    ))
+                            }
+                        </div>
                     </div>
                 </Box>
             )}
@@ -118,34 +106,14 @@ const ShopByCategory = () => {
             {currentTabIndex === 2 && (
                 <Box sx={{ p: 3, width: "100%", margin: "auto", display: "flex", flexDirection: "column", justifyContent: "center" }}>
                     <div className="border-2 shadow-2xl p-5 mx-5">
-                        <p onClick={() => setSelectedCard(0)} className={`cursor-pointer text-center ${selectedCard === 0 ? "text-2xl font-semibold my-3" : "text-xl"}`}>Gundam Action Figures</p>
-                        {selectedCard === 0 && (
-                            <div className="flex flex-col md:flex-row md:space-x-32 justify-center">
-                                {gundamData?.toys?.map((toy) => (
-                                    <ShopByCategoryCard key={toy._id} data={toy} />
-                                ))}
-                            </div>
-                        )}
-                    </div>
-                    <div className="border-2 shadow-2xl p-5 mx-5">
-                        <p onClick={() => setSelectedCard(1)} className={`cursor-pointer text-center ${selectedCard === 1 ? "text-2xl font-semibold my-3" : "text-xl"}`}>Evangelion Action Figures</p>
-                        {selectedCard === 1 && (
-                            <div className="flex flex-col md:flex-row md:space-x-32 justify-center">
-                                {evangelionData?.toys?.map((toy) => (
-                                    <ShopByCategoryCard key={toy._id} data={toy} />
-                                ))}
-                            </div>
-                        )}
-                    </div>
-                    <div className="border-2 shadow-2xl p-5 mx-5">
-                        <p onClick={() => setSelectedCard(2)} className={`cursor-pointer text-center ${selectedCard === 2 ? "text-2xl font-semibold my-3" : "text-xl"}`}>Code Geass Action Figures</p>
-                        {selectedCard === 2 && (
-                            <div className="flex flex-col md:flex-row md:space-x-32 justify-center">
-                                {codeGeassData?.toys?.map((toy) => (
-                                    <ShopByCategoryCard key={toy._id} data={toy} />
-                                ))}
-                            </div>
-                        )}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                        {
+                                loading ? <Loader /> :
+                                     mechaData.map(sd => (
+                                        <ShopByCategoryCard key={sd._id} data={sd} />
+                                    ))
+                            }
+                        </div>
                     </div>
                 </Box>
             )}
