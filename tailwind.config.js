@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        'btn-color': '#F9A51A',
+        // 'btn-color': '#F9A51A',
         "blog-qst-color": '#ef4444',
         'blog-ans-color' : "#047857;"
       },
