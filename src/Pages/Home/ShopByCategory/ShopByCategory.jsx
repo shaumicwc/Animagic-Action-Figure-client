@@ -18,15 +18,15 @@ const ShopByCategory = () => {
             .then((data) => setData(data));
     }, []);
 
-    const narutoData = data.find((dt) => dt._id === "646684b1ca62f505665a1291");
-    const onePieceData = data.find((dt) => dt._id === "646684b1ca62f505665a1292");
-    const dragonBallData = data.find((dt) => dt._id === "646684b1ca62f505665a1293");
-    const sailorMoonData = data.find((dt) => dt._id === "646684b1ca62f505665a1294");
-    const cardCaptorData = data.find((dt) => dt._id === "646684b1ca62f505665a1295");
-    const madokaData = data.find((dt) => dt._id === "646684b1ca62f505665a1296");
-    const gundamData = data.find((dt) => dt._id === "646684b1ca62f505665a1297");
-    const evangelionData = data.find((dt) => dt._id === "646684b1ca62f505665a1298");
-    const codeGeassData = data.find((dt) => dt._id === "646684b1ca62f505665a1299");
+    const narutoData = data.find((dt) => dt._id === "6466a11133a0c04d060b0672");
+    const onePieceData = data.find((dt) => dt._id === "6466a11133a0c04d060b0673");
+    const dragonBallData = data.find((dt) => dt._id === "6466a11133a0c04d060b0674");
+    const sailorMoonData = data.find((dt) => dt._id === "6466a11133a0c04d060b0675");
+    const cardCaptorData = data.find((dt) => dt._id === "6466a11133a0c04d060b0676");
+    const madokaData = data.find((dt) => dt._id === "6466a11133a0c04d060b0677");
+    const gundamData = data.find((dt) => dt._id === "6466a11133a0c04d060b0678");
+    const evangelionData = data.find((dt) => dt._id === "6466a11133a0c04d060b0679");
+    const codeGeassData = data.find((dt) => dt._id === "6466a11133a0c04d060b067a");
 
     return (
         <React.Fragment>

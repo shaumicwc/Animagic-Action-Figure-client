@@ -7,42 +7,48 @@ import SignUp from "../Pages/SignUp/SignUp";
 import AddToy from "../Pages/AddToy/AddToy";
 import ErrorPage from "../Pages/Shared/ErrorPage/ErrorPage";
 import AllToys from "../Pages/AllToys/AllToys";
+import ToyDetails from "../Pages/ToyDetails/ToyDetails";
 
 const router = createBrowserRouter([
     {
-        path : '/',
-        element : <Main/>,
+        path: '/',
+        element: <Main />,
         children: [
             {
-                path : '/',
-                element : <Home/>
+                path: '/',
+                element: <Home />
             },
             {
-                path : 'login',
-                element : <Login/>
+                path: 'login',
+                element: <Login />
             },
             {
-                path : 'signup',
-                element : <SignUp/>
+                path: 'signup',
+                element: <SignUp />
             },
             {
-                path : 'blog',
-                element : <Blog/>
+                path: 'blog',
+                element: <Blog />
             },
             {
-                path : 'addToy',
-                element : <AddToy/>
+                path: 'addToy',
+                element: <AddToy />
             },
             {
-                path : 'allToys',
-                element : <AllToys/>,
-                loader : () => fetch('http://localhost:3000/allToys')
+                path: 'allToys',
+                element: <AllToys />,
+                loader: () => fetch('http://localhost:3000/allToys')
+            },
+            {
+                path: 'toyDetails/:id',
+                element: <ToyDetails/>,
+                loader: ({ params }) => fetch(`http://localhost:3000/toyDetails/${params.id}`)
             }
         ]
     },
     {
         path: '*',
-        element: <ErrorPage/>
+        element: <ErrorPage />
     }
 ]);
 

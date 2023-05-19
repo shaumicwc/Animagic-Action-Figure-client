@@ -21,7 +21,7 @@ export default {
     },
   },
   daisyui : {
-    themes : ['lofi']
+    themes : ['retro']
   },
   plugins: [require('daisyui')],
 }
