@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 
 import Loader from '../Shared/Loader/Loader';
 import { AuthContext } from '../../Provider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 const SignUp = () => {
     const { createUser, loading, setLoading, setUser } = useContext(AuthContext);
     const [error, setError] = useState('')
+    useTitle('Sign Up')
 
 
     const handleSubmit = event => {

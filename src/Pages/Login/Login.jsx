@@ -1,12 +1,14 @@
-import React, { useContext, useState } from 'react';
+import  { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 import Loader from '../Shared/Loader/Loader';
 import { AuthContext } from '../../Provider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 const Login = () => {
     const { googleLoginUser, loginInUser, loading, setLoading, setUser } = useContext(AuthContext);
     const [error, setError] = useState('')
+    useTitle('Login')
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -79,7 +81,7 @@ const Login = () => {
                             <div className="divider">OR</div>
                         </div>
                         <div className="form-control mt-6">
-                            <button onClick={handleGoogleLogin} className="btn hover:bg-transparent bg-transparent hover:text-black text-black flex items-center justify-center"><FcGoogle className='w-7 h-7 mx-5' /> Login with google</button>
+                            <button onClick={handleGoogleLogin} className="btn hover:bg-transparent bg-transparent  flex items-center justify-center"><FcGoogle className='w-7 h-7 mx-5' /> Login with google</button>
                         </div>
                     </form>
                 </div>

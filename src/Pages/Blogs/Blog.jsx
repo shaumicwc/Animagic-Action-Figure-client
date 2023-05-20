@@ -1,6 +1,10 @@
-import React from 'react';
+// import React from 'react';
+
+import useTitle from "../../hooks/useTitle";
 
 const Blog = () => {
+    useTitle('Blog');
+
     return (
         <div className='py-10'>
             <div className='flex justify-around items-center'>

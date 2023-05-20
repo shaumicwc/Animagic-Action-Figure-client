@@ -1,10 +1,12 @@
-// import React from 'react';
+import React from 'react';
 import { FaStar } from 'react-icons/fa';
 import { useLoaderData } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 
 const ToyDetails = () => {
     const toyDetails = useLoaderData();
-    // console.log(toyDetails)
+    useTitle('Toy Details')
+    
 
     return (
         <div className='p-10 my-5 w-full h-full'>

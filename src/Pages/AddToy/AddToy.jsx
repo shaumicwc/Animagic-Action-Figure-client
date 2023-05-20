@@ -1,13 +1,16 @@
-import React, { useContext, useState } from 'react';
+// import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import Select from 'react-select';
 import Swal from 'sweetalert2';
+import useTitle from '../../hooks/useTitle';
 
 
 
 const AddToy = () => {
     const { user } = useContext(AuthContext)
     const [selectedOption, setSelectedOption] = useState(null);
+    useTitle('Add A Toy')
 
     const options = [
         { value: 'Action Figures', label: 'Action Figures' },

@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 
 const AllToys = () => {
   const toysData = useLoaderData();
   const [showBtn, setShowBtn] = useState(false);
   const [limit, setLimit] = useState([]);
+  useTitle('All Toys')
 
   useEffect(() => {
     if (toysData.length > 20) {

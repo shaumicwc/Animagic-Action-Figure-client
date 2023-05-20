@@ -3,12 +3,15 @@ import { useContext, useEffect, useState } from 'react';
 import { FaPencilAlt, FaTrashAlt } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../Provider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 const MyToys = () => {
     const { user } = useContext(AuthContext)
     const [toysData, setToysData] = useState([])
     const [open, setOpen] = useState(false)
     const [id, setId] = useState('')
+    useTitle('My Toys')
+
     useEffect(() => {
         fetch(`https://animagic-action-figure-server-virid.vercel.app/myToys/${user?.email}`)
             .then(res => res.json())

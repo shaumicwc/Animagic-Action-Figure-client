@@ -26,15 +26,15 @@ const NavBar = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
                     <div tabIndex={0} className='md:space-x-8 menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-28'>
-                        <Link className={location.pathname === '/' && 'text-[#01b0e9]'} to='/'>Home</Link>
-                        <Link className={location.pathname === '/allToys' && 'text-[#01b0e9]'} to='/allToys'>All Toys</Link>
+                        <Link className={location.pathname === '/' && 'text-white'} to='/'>Home</Link>
+                        <Link className={location.pathname === '/allToys' && 'text-white'} to='/allToys'>All Toys</Link>
                         {
                             user && <>
-                                <Link className={location.pathname === '/myToys' && 'text-[#01b0e9]'} to='/myToys'>My Toys</Link>
-                                <Link className={location.pathname === '/addToy' && 'text-[#01b0e9]'} to='/addToy'>Add A Toy</Link>
+                                <Link className={location.pathname === '/myToys' && 'text-white'} to='/myToys'>My Toys</Link>
+                                <Link className={location.pathname === '/addToy' && 'text-white'} to='/addToy'>Add A Toy</Link>
                             </>
                         }
-                        <Link className={location.pathname === '/blog' && 'text-[#01b0e9]'} to='/blog'>Blog</Link>
+                        <Link className={location.pathname === '/blog' && 'text-white'} to='/blog'>Blog</Link>
                     </div>
                 </div>
                 <div className='flex items-center'>
@@ -43,15 +43,15 @@ const NavBar = () => {
                 </div>
             </div>
             <div className='md:space-x-8 font-bold hidden md:flex'>
-                <Link className={location.pathname === '/' && 'text-[#01b0e9]'} to='/'>Home</Link>
-                <Link className={location.pathname === '/allToys' && 'text-[#01b0e9]'} to='/allToys'>All Toys</Link>
+                <Link className={location.pathname === '/' && 'text-white'} to='/'>Home</Link>
+                <Link className={location.pathname === '/allToys' && 'text-white'} to='/allToys'>All Toys</Link>
                 {
                     user && <>
-                        <Link className={location.pathname === '/myToys' && 'text-[#01b0e9]'} to='/myToys'>My Toys</Link>
-                        <Link className={location.pathname === '/addToy' && 'text-[#01b0e9]'} to='/addToy'>Add A Toy</Link>
+                        <Link className={location.pathname === '/myToys' && 'text-white'} to='/myToys'>My Toys</Link>
+                        <Link className={location.pathname === '/addToy' && 'text-white'} to='/addToy'>Add A Toy</Link>
                     </>
                 }
-                <Link className={location.pathname === '/blog' && 'text-[#01b0e9]'} to='/blog'>Blog</Link>
+                <Link className={location.pathname === '/blog' && 'text-white'} to='/blog'>Blog</Link>
             </div>
             {
                 user ? <div>
