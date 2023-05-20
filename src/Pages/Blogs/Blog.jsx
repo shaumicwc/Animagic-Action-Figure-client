@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 import useTitle from "../../hooks/useTitle";
 
@@ -74,8 +74,8 @@ const Blog = () => {
                 </p>
                 <p  className='font-semibold'> Express Js : </p>
                 <p>Express Js is a special tool that helps computer programmers build websites and apps. It's like a set of building blocks that make it easier to create cool things on the internet. Express Js is popular because it's simple to use and gives programmers a lot of freedom to design their websites or apps in their own way. It can handle things like showing web pages, handling user input, and connecting to databases. Lots of people like using Express.js because it's like having a big toolbox full of useful tools for building websites and apps.</p> <br />
-                <p  className='font-semibold'> Next Js : </p>
-                <p>Nest JS is a special tool that helps programmers build powerful websites and apps. It's organized, uses TypeScript for safety, and works well with other tools. It's a great choice for building awesome web applications.</p>
+                <p  className='font-semibold'> Nest Js : </p>
+                <p>Nest.js is a framework for building server-side applications using JavaScript or TypeScript. It's like a toolbox that helps developers create web applications and APIs easily. Nest.js provides a structured way to organize code, making it easier to understand and maintain. It also offers features like routing, dependency injection, and modular architecture, which help developers build scalable and efficient applications. It's a helpful tool for creating powerful backend systems for websites and applications.</p>
           
                 
         </div>
@@ -91,9 +91,9 @@ const Blog = () => {
                 <span className="text-blog-ans-color font-extrabold text-xl font-blog-qst-font-family mb-5">Answer: </span> </p>
                 
 
-                <p className='font-semibold'> MongoDB:</p>
+                <p className='font-semibold'> MongoDB aggregate:</p>
 
-                <p>MongoDB is a special type of computer system that helps store and manage data. It's like a big container where you can keep lots of information.  You can easily add, remove, or change data as needed. MongoDB also has powerful tools that allow you to search, group, and analyze the data in smart ways.</p> <br />
+                <p>MongoDB aggregate is a feature that allows you to perform advanced data processing tasks on collections. It uses a pipeline of stages to filter, group, sort, and transform data. Each stage performs a specific operation, such as matching documents, grouping them, or calculating aggregate values. It provides a flexible and powerful way to manipulate and analyze data within MongoDB collections.</p> <br />
 
                 <p className='font-semibold'>How MongoDB works:</p>
 

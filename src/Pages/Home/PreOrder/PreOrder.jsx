@@ -1,6 +1,5 @@
-// import React from 'react';
+import React from 'react';
 import Aos from 'aos';
-// import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 Aos.init()
