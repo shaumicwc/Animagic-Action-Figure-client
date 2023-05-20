@@ -1,8 +1,12 @@
-import React from 'react';
+// import React from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
+Aos.init()
 
 const Banner = () => {
     return (
-        <div className='w-full relative my-5'>
+        <div data-aos='zoom-in' data-aos-delay='800' className='w-full relative my-5'>
         <img
         style={{height : '85vh'}}
           className='w-full brightness-65'

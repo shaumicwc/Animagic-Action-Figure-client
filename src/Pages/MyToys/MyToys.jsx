@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 import { FaPencilAlt, FaTrashAlt } from 'react-icons/fa';
 import Swal from 'sweetalert2';
@@ -10,7 +10,7 @@ const MyToys = () => {
     const [open, setOpen] = useState(false)
     const [id, setId] = useState('')
     useEffect(() => {
-        fetch(`http://localhost:3000/myToys/${user?.email}`)
+        fetch(`https://animagic-action-figure-server-virid.vercel.app/myToys/${user?.email}`)
             .then(res => res.json())
             .then(data => setToysData(data))
     }, [user, toysData])
@@ -34,7 +34,7 @@ const MyToys = () => {
             reverseButtons: true
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:3000/myToys/${_id}`, {
+                fetch(`https://animagic-action-figure-server-virid.vercel.app/myToys/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -73,7 +73,7 @@ const MyToys = () => {
         const quantity = form.quantity.value;
         const description = form.description.value;
       
-        fetch(`http://localhost:3000/myToys/${id}`, {
+        fetch(`https://animagic-action-figure-server-virid.vercel.app/myToys/${id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',

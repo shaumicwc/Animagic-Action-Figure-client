@@ -1,9 +1,13 @@
-import React from 'react';
+// import React from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
+Aos.init()
 
 const BoxSet = () => {
     return (
 
-        <div className='my-5 px-5 flex flex-col justify-center'>
+        <div data-aos='zoom-out' data-aos-delay='800' className='my-5 px-5 flex flex-col justify-center'>
             <p className='font-bold text-3xl text-center my-5'>SPECIAL BOX-SET Section</p>
             <p className='font-semibold text-center mb-16'>Grab Our Custom Made SPECIAL BOX SETS in Cheapest Price and Most Premium Quality </p>
             <div className='grid md:grid-cols-3 grid-cols-1 gap-4'>

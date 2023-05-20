@@ -1,9 +1,10 @@
-import React from 'react';
+// import React from 'react';
 import { FaStar } from 'react-icons/fa';
 import { useLoaderData } from 'react-router-dom';
 
 const ToyDetails = () => {
     const toyDetails = useLoaderData();
+    // console.log(toyDetails)
 
     return (
         <div className='p-10 my-5 w-full h-full'>

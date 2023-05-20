@@ -1,8 +1,13 @@
-import React from 'react';
+// import React from 'react';
+import Aos from 'aos';
+// import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+Aos.init()
 
 const PreOrder = () => {
     return (
-        <div className='my-5 px-5 flex flex-col justify-center '>
+        <div data-aos='zoom-in' data-aos-delay="500" className='my-5 px-5 flex flex-col justify-center '>
             <p className='font-bold text-3xl text-center my-5'>Pre-Order Section</p>
             <p className='font-semibold text-center my-5'>Get Our Most Exclusive Action Figures Before Everyone in Less Price</p>
             <div className='grid md:grid-cols-3 grid-cols-1 gap-5'>

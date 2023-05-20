@@ -39,12 +39,12 @@ const router = createBrowserRouter([
             {
                 path: 'allToys',
                 element: <AllToys />,
-                loader: () => fetch('http://localhost:3000/allToys')
+                loader: () => fetch('https://animagic-action-figure-server-virid.vercel.app/allToys')
             },
             {
                 path: 'toyDetails/:id',
                 element: <ToyDetails/>,
-                loader: ({ params }) => fetch(`http://localhost:3000/toyDetails/${params.id}`)
+                loader: ({ params }) => fetch(`https://animagic-action-figure-server-virid.vercel.app/toyDetails/${params.id}`)
             },
             {
                 path:'myToys',
@@ -53,7 +53,7 @@ const router = createBrowserRouter([
             {
                 path : 'categoryToyDetails/:id',
                 element: <ShopByCategoryToyDetails/>,
-                loader : ({params}) => fetch(`http://localhost:3000/categoryToyDetails/${params.id}`)
+                loader : ({params}) => fetch(`https://animagic-action-figure-server-virid.vercel.app/categoryToyDetails/${params.id}`)
             }
         ]
     },
