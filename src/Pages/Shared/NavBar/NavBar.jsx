@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-
 import { HiUserCircle } from "react-icons/hi";
 import { AuthContext } from '../../../Provider/AuthProvider';
 
@@ -38,8 +37,7 @@ const NavBar = () => {
                     </div>
                 </div>
                 <div className='flex items-center'>
-                    <img className='hidden md:block md:w-28 -ml-5 md:-mr-5' src="https://i.ibb.co/HhcwTD4/logo.png" alt="logo" border="0" />
-                    <p className='md:text-3xl text-lg font-bold'>Animagic Action Figure</p>
+                     <p className=" text-xl md:text-3xl md:font-bold bg-gradient-to-l from-[#eeaeca] to-[#94bbe9] text-transparent bg-clip-text">Animagic Action Figure</p>
                 </div>
             </div>
             <div className='md:space-x-8 font-bold hidden md:flex'>
@@ -55,13 +53,13 @@ const NavBar = () => {
             </div>
             {
                 user ? <div>
-                    <div className="tooltip hover:tooltip-open tooltip-bottom" data-tip={user.displayName ? user.displayName : 'No UserName'}>
+                    <div className="tooltip hover:tooltip-open tooltip-bottom" data-tip={user?.displayName ? user?.displayName : 'No UserName'}>
                         {
-                            user.photoURL ? <img className='w-8 h-8 mx-3 md:mx-5 rounded-full' src={user.photoURL} alt="" /> : <HiUserCircle className='w-8 h-8 mx-3 md:mx-5' />
+                            user?.photoURL ? <img className='w-6 h-6 md:w-8 md:h-8 mx-3 md:mx-5 rounded-full' src={user?.photoURL} alt="" /> : <HiUserCircle className='w-6 h-6 md:w-8 md:h-8 mx-3 md:mx-5 rounded-full' />
                         }
                     </div>
-                    <button onClick={handleSignOut} className='btn font-bold rounded-md'>Sign Out</button>
-                </div> : <Link to='/login'><button className='btn font-bold rounded-md'>Login</button></Link>
+                    <button onClick={handleSignOut} className='btn md:font-bold rounded-lg'>Sign Out</button>
+                </div> : <Link to='/login'><button className='btn md:font-bold rounded-lg'>Login</button></Link>
             }
 
         </div>

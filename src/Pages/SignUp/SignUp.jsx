@@ -1,13 +1,13 @@
-import { useContext, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-
 import Loader from '../Shared/Loader/Loader';
-import { AuthContext } from '../../Provider/AuthProvider';
 import useTitle from '../../hooks/useTitle';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const SignUp = () => {
     const { createUser, loading, setLoading, setUser } = useContext(AuthContext);
     const [error, setError] = useState('')
+    const [success, setSuccess] = useState('');
     useTitle('Sign Up')
 
 
@@ -30,6 +30,7 @@ const SignUp = () => {
                 user.displayName = name;
                 user.photoURL = photo;
                 setUser(user)
+                setSuccess('Sign Up successfully')
                 setLoading(false)
                 form.reset();
             })
@@ -44,7 +45,7 @@ const SignUp = () => {
                 }
                 console.log(errorMessage)
             })
-        }
+    }
     return (
         <>
             {
@@ -81,6 +82,7 @@ const SignUp = () => {
                             </label>
                         </div>
                         <p className='text-red-800'>{error}</p>
+                        <p className='text-green-800'>{success}</p>
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Sign Up</button>
                         </div>

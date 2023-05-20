@@ -1,10 +1,8 @@
-import { useContext, useState } from 'react';
-import { AuthContext } from '../../Provider/AuthProvider';
+import React, { useContext, useState } from 'react';
 import Select from 'react-select';
 import Swal from 'sweetalert2';
 import useTitle from '../../hooks/useTitle';
-
-
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const AddToy = () => {
     const { user } = useContext(AuthContext)
@@ -20,7 +18,6 @@ const AddToy = () => {
         { value: 'Garage Kits', label: 'Garage Kits' },
         { value: 'Scenery Set', label: 'Scenery Set' },
     ];
-
 
     const category = selectedOption?.map(sp => sp.value);
 
@@ -38,7 +35,7 @@ const AddToy = () => {
 
         const toyInfo = { photo, toyName, sellerName, email, category, price, ratings, quantity, description }
 
-        fetch('https://animagic-action-figure-server-virid.vercel.app/allToys', {
+        fetch('http://localhost:3000/allToys', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -58,7 +55,7 @@ const AddToy = () => {
             })
     }
     return (
-        <form onSubmit={handleSubmit} className='p-10 my-5 w-4/6 mx-auto border-2 shadow-2xl'>
+        <form onSubmit={handleSubmit} className='p-10 my-5 w-4/6 mx-auto border-2 rounded-xl shadow-2xl'>
             <p className='mb-7 text-3xl font-bold text-center'>
                 Add A Toy
             </p>
@@ -92,7 +89,8 @@ const AddToy = () => {
                     <label className="label">
                         <span className="label-text font-semibold">Sub-category</span>
                     </label>
-                  <Select
+                    <Select
+                        onFocus='outline-none'
                         placeholder='Select subcategory'
                         defaultValue={selectedOption}
                         onChange={setSelectedOption}

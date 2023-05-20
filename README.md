@@ -1,6 +1,6 @@
 ### Short Description :
 * This website is made based on anime action figure 
-* Its mobile responsive.
+* Home Page of this website is mobile responsive.
 * AOS feature made home page look super awesome.
 * React Tab has been used to make website attractive.
 * Two Extra feature has made the website more realistic.

@@ -1,13 +1,12 @@
 import React from 'react';
 import Aos from 'aos';
-import 'aos/dist/aos.css';
 
 Aos.init()
 
 const BoxSet = () => {
     return (
 
-        <div data-aos='zoom-out' data-aos-delay='800' className='my-5 px-5 flex flex-col justify-center'>
+        <div data-aos='zoom-in' data-aos-delay='800'  className='my-5 px-5 flex flex-col justify-center'>
             <p className='font-bold text-3xl text-center my-5'>SPECIAL BOX-SET Section</p>
             <p className='font-semibold text-center mb-16'>Grab Our Custom Made SPECIAL BOX SETS in Cheapest Price and Most Premium Quality </p>
             <div className='grid md:grid-cols-3 grid-cols-1 gap-4'>
@@ -27,7 +26,7 @@ const BoxSet = () => {
                     <div className="card-body">
                         <h2 className="card-title">Special Box Set: 2</h2>
                         <p className='font-semibold'>Price:$499 </p>
-                        <p className='font-semibold '>Box Description with Offers: <span className='font-normal'>Super Premium Quality, 6 Action Figures, Customization Ability, 3 Different Sets of Colours Available, 24% Discount, Super Fast Delivery </span></p>
+                        <p className='font-semibold '>Box Description with Offers: <span>Super Premium Quality, 6 Action Figures, Customization Ability, 3 Different Sets of Colours Available, 24% Discount, Super Fast Delivery </span></p>
                         <div className="card-actions justify-end">
                             <button className="btn btn-primary">Order Now!!!</button>
                         </div>
@@ -38,7 +37,7 @@ const BoxSet = () => {
                     <div className="card-body">
                         <h2 className="card-title">Special Box Set: 3</h2>
                         <p className='font-semibold'>Price:$699 </p>
-                        <p className='font-semibold  '>Box Description with Offers: <span className='font-normal'> Super Premium Quality, 12 Action Figure, Customization Ability, 5 Different Sets of Colours Available, 28% Discount, Super Fast Delivery with Free Shipping </span></p>
+                        <p className='font-semibold  '>Box Description with Offers: <span> Super Premium Quality, 12 Action Figure, Customization Ability, 5 Different Sets of Colours Available, 28% Discount, Super Fast Delivery with Free Shipping </span></p>
                         <div className="card-actions justify-end">
                             <button className="btn btn-primary">Order Now!!!</button>
                         </div>
@@ -52,6 +51,3 @@ const BoxSet = () => {
 };
 
 export default BoxSet;
-
-
-
