@@ -19,7 +19,7 @@ const ShopByCategory = () => {
     };
 
     useEffect(() => {
-        fetch("http://localhost:3000/categoryToys")
+        fetch("https://animagic-action-figure-server-virid.vercel.app/categoryToys")
             .then((res) => res.json())
             .then((data) => {
                 setData(data);
@@ -30,7 +30,31 @@ const ShopByCategory = () => {
             });
     }, []);
 
-
+ useEffect(() => {
+        const shonenData1 = data.find((dt) => dt._id === "6467eb4733a0c04d06ec0a87");
+        const shonenData2 = data.find((dt) => dt._id === "6467eb4733a0c04d06ec0a88");
+        const shonenData3 = data.find((dt) => dt._id === "6467eb4733a0c04d06ec0a89");
+        const megicalGirlData1 = data.find((dt) => dt._id === "6467eb4733a0c04d06ec0a8a");
+        const megicalGirlData2 = data.find((dt) => dt._id === "6467eb4733a0c04d06ec0a8b");
+        const megicalGirlData3 = data.find((dt) => dt._id === "6467eb4733a0c04d06ec0a8c");
+        const mechaData1 = data.find((dt) => dt._id === "6467eb4733a0c04d06ec0a8d");
+        const mechaData2 = data.find((dt) => dt._id === "6467eb4733a0c04d06ec0a8e");
+        const mechaData3 = data.find((dt) => dt._id === "6467eb4733a0c04d06ec0a8f");
+      
+        // Check if all shonenData variables are defined
+        if (shonenData1 && shonenData2 && shonenData3) {
+          setShonenData([shonenData1, shonenData2, shonenData3]);
+          setLoading(false)
+        }
+         if(megicalGirlData1 && megicalGirlData2 && megicalGirlData3){
+            setMegicalGirlData([megicalGirlData1, megicalGirlData2, megicalGirlData3])
+            setLoading(false)
+         }
+         if(mechaData1 && mechaData2 && mechaData3){
+            setMechaData([mechaData1, mechaData2, mechaData3])
+            setLoading(false)
+         }
+      }, [data]);
 
     return (
         <React.Fragment>

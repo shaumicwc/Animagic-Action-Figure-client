@@ -3,7 +3,6 @@ import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
-import Blog from "../Pages/Blog/Blog";
 import ErrorPage from "../Pages/Shared/ErrorPage/ErrorPage";
 import AddToy from "../Pages/AddToy/AddToy";
 import AllToys from "../Pages/AllToys/AllToys";
@@ -11,6 +10,7 @@ import ToyDetails from "../Pages/ToyDetails/ToyDetails";
 import MyToys from "../Pages/MyToys/MyToys";
 import ShopByCategoryToyDetails from "../Pages/ShopByCategoryToyDetails/ShopByCategoryToyDetails";
 import PrivateRoute from "./PrivateRoute";
+import Blog from "../Pages/Blogs/Blog";
 
 const router = createBrowserRouter([
     {
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'blog',
-                element: <Blog />
+                element: <Blog/>
             },
             {
                 path: 'addToy',
@@ -40,12 +40,11 @@ const router = createBrowserRouter([
             {
                 path : 'allToys',
                 element : <AllToys/>,
-                loader : () => fetch('http://localhost:3000/allToys')
             },
             {
                 path : 'toyDetails/:id',
                 element : <PrivateRoute><ToyDetails/></PrivateRoute>,
-                loader : ({params}) => fetch(`http://localhost:3000/toyDetails/${params.id}`)
+                loader : ({params}) => fetch(`https://animagic-action-figure-server-virid.vercel.app/toyDetails/${params.id}`)
             },
             {
                 path : 'myToys',
@@ -54,7 +53,7 @@ const router = createBrowserRouter([
             {
                 path : 'categoryToyDetails/:id',
                 element: <PrivateRoute><ShopByCategoryToyDetails/></PrivateRoute>,
-                loader : ({params}) => fetch(`http://localhost:3000/categoryToyDetails/${params.id}`)
+                loader : ({params}) => fetch(`https://animagic-action-figure-server-virid.vercel.app/categoryToyDetails/${params.id}`)
             }
         ]
     },

@@ -7,4 +7,6 @@
 * Mongodb has been used as database.
 * Server Side code has been deployed in Vercel
 
-### Live Firebase Link : https://animagic-action-figure-dc1a3.web.app/
+### Vercel Server Link : https://animagic-action-figure-server-virid.vercel.app/
+
+### Live Firebase Link : https://animagic-action-figure-dc1a3.web.app
