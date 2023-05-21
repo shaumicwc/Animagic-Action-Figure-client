@@ -36,8 +36,9 @@ const NavBar = () => {
                         <Link className={location.pathname === '/blog' && 'text-white'} to='/blog'>Blog</Link>
                     </div>
                 </div>
-                <div className='flex items-center'>
-                     <p className=" text-xl md:text-3xl md:font-bold bg-gradient-to-l from-[#eeaeca] to-[#94bbe9] text-transparent bg-clip-text">Animagic Action Figure</p>
+                <div className='flex items-center md:space-x-5 px-3 md:px-5'>
+                    <img className='w-24 -ml-5 md:-mr-5' src="https://i.ibb.co/59GRBKK/logo.png" alt="logo" border="0" />
+                    <p className=" text-xl hidden md:block md:text-3xl md:font-bold">Animagic Action Figure</p>
                 </div>
             </div>
             <div className='md:space-x-8 font-bold hidden md:flex'>

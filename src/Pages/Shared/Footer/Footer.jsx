@@ -4,10 +4,7 @@ const Footer = () => {
     return (
         <footer className="footer bg-neutral text-neutral-content py-16 relative flex flex-col md:flex-row md:items-center md:justify-center">
             <div className="items-center mx-10 grid-flow-col md:place-self-center">
-
-                <p className=" text-xl md:text-3xl md:font-bold bg-gradient-to-l from-[#eeaeca] to-[#94bbe9] text-transparent bg-clip-text">
-                    Animagic Action Figure
-                </p>
+            <img className='w-36 md:w-full -ml-5 md:-mr-5' src="https://i.ibb.co/59GRBKK/logo.png" alt="logo" border="0" />
             </div>
             <div className='mx-10'>
                 <span className="footer-title">HELP & CUSTOMER SERVICE</span>
