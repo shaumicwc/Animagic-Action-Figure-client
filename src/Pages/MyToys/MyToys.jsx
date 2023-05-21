@@ -11,7 +11,6 @@ const MyToys = () => {
     const [id, setId] = useState('');
     const [sort, setSort] = useState(true);
     useTitle('My Toys')
-    // console.log(toysData)
 
     useEffect(() => {
         if (user && user.email) {
@@ -90,10 +89,10 @@ const MyToys = () => {
         })
             .then(res => res.json())
             .then(data => {
-                if (data.result.modifiedCount > 0) {
+                if (data.modifiedCount > 0) {
                     Swal.fire({
                         icon: 'success',
-                        title: 'Haha....',
+                        title: 'YES!!!',
                         text: 'Information updated successfully!',
                     });
                     const remaining = toysData.filter((dt) => dt._id !== id);
@@ -101,7 +100,7 @@ const MyToys = () => {
                     const newToysData = [updatedData, ...remaining]
                     setToysData(newToysData);
                 }
-                // console.log(data);
+                console.log(data);
             })
             .catch((error) => {
                 console.log(error.message);
