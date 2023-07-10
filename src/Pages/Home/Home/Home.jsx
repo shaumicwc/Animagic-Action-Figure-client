@@ -5,6 +5,9 @@ import ShopByCategory from '../ShopByCategory/ShopByCategory';
 import PreOrder from '../PreOrder/PreOrder';
 import BoxSet from '../BoxSet/BoxSet';
 import useTitle from '../../../hooks/useTitle';
+import Testimonial from '../Testimonial/Testimonial';
+import Accordion from '../Accordion/Accordion';
+
 
 const Home = () => {
     useTitle('Home')
@@ -15,6 +18,8 @@ const Home = () => {
             <ShopByCategory/>
             <PreOrder/>
             <BoxSet/>
+            <Testimonial/>
+            <Accordion/>
            
         </div>
     );
